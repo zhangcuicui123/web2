@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class = "aaa"></div>
+	</body>
+	<script>
+		//QQ号
+		var reg = /^[1-9][0-9]{4,10}$/;
+		//class的名字
+		var dom = document.getElementsByClassName("aaa")[0];
+		function getName(dom){			
+			console.log(dom.getAttribute("class"));
+		}
+		getName(dom);
+		//身份证号
+		//var reg = /^[1-8][0-7][0-9]{12|15}[0-9x]$/;
+		//用户密码
+		//var reg = /\w\W{3,10}/;
+		//一年的12个月
+		//var reg = /^[1-9]$|^1[0-2]$/;
+		//一个月的31天
+		//var reg = /^[1-9]$|^[1-2][0-9]$|^3[01]$/;
+		var str = prompt("输入");
+		if(reg.test(str)){
+			alert("输入正确");
+		}else{
+			alert("输入错误");
+		}
+	</script>
+</html>
