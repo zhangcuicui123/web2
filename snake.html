@@ -108,9 +108,10 @@
 		//小蛇动起来
 		Snake.prototype.move = function(){
 			//不能碰到边界
-			if(this.bodyArr[0].x > 19 || this.bodyArr[0].x <= 0 || this.bodyArr[0].y > 19 || this.bodyArr[0].y <= 0){
+			if(this.bodyArr[0].x == 19 || this.bodyArr[0].x < 0 || this.bodyArr[0].y == 19 || this.bodyArr[0].y < 0){
 				this.stop();
 				alert("你输了");
+				return;
 			}
 			//删除尾部
 			this.bodyArr.pop();
